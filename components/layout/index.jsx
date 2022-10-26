@@ -6,28 +6,40 @@ import Footer from "./footer/index.jsx"
 import LeftNav from "./left-nav/index.jsx"
 
 export default function Layout (props) {
+    // Estado + bolean + activar o desactivar left-nav mediante dos clases en el cual intervenga un grid ancho-leftnav + auto
 
     return (
-        <div className="app-cointainer">
+        <div className="layout">
             <Head>
                 <title>Head desde layout</title>
                 <meta name="description" content="Contenido para payments-app"/>
             </Head>
-
-            <header>
-                <Navbar/>
-            </header>
-            <main>
-                {/* Left Nav */}
+            
+            {/* Left Nav */}
+            <div className="layout-container__body-left-nav">
                 <LeftNav/>
+            </div>
 
-                {/* Panel */}
-                <h2>desde Layout</h2>
-                {props.children}
-            </main>
-            <footer>
-                <Footer/>
-            </footer>
+            {/* Layout */}
+            <div className="layout-container">
+                <header>
+                    <Navbar/>
+                </header>
+
+                <main>
+                    <div className="layout-container__body">
+                        {/* Panel */}
+                        <div className="layout-container__body-panel">
+                            {props.children}
+                        </div>
+                    </div>
+                </main>
+
+                <footer>
+                    <Footer/>
+                </footer>
+            </div>
+            
         </div>
     )
 }

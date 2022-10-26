@@ -1,9 +1,7 @@
 export default function Footer () {
     return (
-        <div>
-            <main>
-                <h2>desde Footer</h2>
-            </main>
+        <div className="footer-container">
+            <h2>desde Footer</h2>
         </div>
     )
 }

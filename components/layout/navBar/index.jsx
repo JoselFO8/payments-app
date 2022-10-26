@@ -10,11 +10,11 @@ export default function Navbar () {
                         alt="Payments slogan"
                         width={150}
                         height={50}
-                    ></Image>
+                    />
                 </div>
                 <div className="navbar-container__acount">
                     <div className="navbar-container__acount-greeting">
-                        <p><b>Hola,</b><span>Nombre Usuario</span></p>
+                        <p><b>Hola, </b><span>Nombre Usuario</span></p>
                     </div>
                     <div className="navbar-container__acount-image">
                         
