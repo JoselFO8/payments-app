@@ -1,0 +1,44 @@
+// Colors
+$palette-primary: #4c20df;
+$palette-secondary: #9b65e2;
+$palette-terciary: #4c57e9;
+
+// Header
+%head-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+// Text
+%primary {
+    font-size: 25px;
+    color: #030303;
+}
+%secondary {
+    font-size: 17px;
+    color: #030303;
+}
+%terciary {
+    font-size: 14px;
+    color: #030303;
+}
+%quaternary {
+    font-size: 11px;
+    color: #929292b3;
+}
+
+// Buttons
+%button {
+    background-color: #3f3f3f;
+    color: #d4d4d4;
+    margin: 0px 4px;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+
+    font-size: 14px;
+    // font-family: $font;
+}
