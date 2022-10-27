@@ -24,7 +24,6 @@ export default function Performance () {
                         <p className="performance-container__payments-consumed-row-secondary">$ 150.000.000</p>
                         <p className="performance-container__payments-consumed-row-secondary">$ 0</p>
                     </div>
-                    {/* <p className="performance-container__payments-consumed-progress">barra progreso</p> */}
                     <progress 
                         className="performance-container__payments-consumed-progress" 
                         // id="file" 
@@ -36,6 +35,39 @@ export default function Performance () {
                         <p className="performance-container__payments-consumed-row-terciary">07 de octubre de 2021</p>
                     </div>
                 </div>
+
+                <div className="performance-container__payments-payroll">
+                    <p className="performance-container__payments-payroll-secondary">Mis nominas</p>
+                    
+                    <div className="performance-container__payments-payroll-invoice">
+                        <div className="performance-container__payments-payroll-invoice-date">
+                            <p>Facturas del 07 Octubre</p>
+                        </div>
+                        <div className="performance-container__payments-payroll-invoice-table">
+                            <table className="table table-hover">
+                                <thead className="head">
+                                    <tr>
+                                        <th className="borders" scope="col">Facturas</th>
+                                        <th className="borders" scope="col">Proveedores</th>
+                                        <th className="borders" scope="col">Monto</th>
+                                        <th className="borders" scope="col">Fecha de pago</th>
+                                    </tr>
+                                </thead>
+                                
+                                <tbody className="body">
+                                    <tr>
+                                        <td className="borders">238</td>
+                                        <td className="borders">32</td>
+                                        <td className="borders">$ 148017159</td>
+                                        <td className="borders">07 Oct. 2021</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
  
             <div className="performance-container__graphic">

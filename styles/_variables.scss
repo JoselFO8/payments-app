@@ -3,6 +3,12 @@ $palette-primary: #4c20df;
 $palette-secondary: #9b65e2;
 $palette-terciary: #4c57e9;
 
+$text-primary: #030303;
+$text-secondary: #606060;
+$text-terciary: #60606080;
+
+$table-border-primary: #85858580;
+
 // Header
 %head-row {
     display: flex;
@@ -15,19 +21,19 @@ $palette-terciary: #4c57e9;
 // Text
 %primary {
     font-size: 25px;
-    color: #030303;
+    color: $text-primary;
 }
 %secondary {
     font-size: 17px;
-    color: #030303;
+    color: $text-primary;
 }
 %terciary {
-    font-size: 14px;
-    color: #030303;
+    font-size: 13px;
+    color: $text-primary;
 }
 %quaternary {
     font-size: 11px;
-    color: #929292b3;
+    color: $text-terciary;
 }
 
 // Buttons
