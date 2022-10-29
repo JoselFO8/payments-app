@@ -1,0 +1,28 @@
+.left-nav-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    // justify-content: space-evenly;
+
+    &__slogan{
+        margin: 10px 10px;
+    }
+
+    &__icons {
+        // background-color: aquamarine;
+        height: 43%;
+        width: 40px;
+        margin: 30px 10px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    
+        .icon {
+            filter: invert(99%) sepia(81%) saturate(317%) hue-rotate(345deg) brightness(107%) contrast(92%);
+        }
+    }
+}
+

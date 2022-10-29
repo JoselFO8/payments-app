@@ -1,26 +1,35 @@
 @import './variables';
 
-.layout-container {
-    display: grid;
-    grid-template-columns: 86px auto;
-    font-family: $font-secondary;
+.layout {
+    margin: 30px 50px 30px 50px;
 
-    &__body {
-        
-        &-base {
-            background-color: #eeeeee;
-            // height: calc(100vh - 60px - 40px);
-            height: calc(100vh - 80px);
-            padding: 10px;
-            
-            &-panel {
-                height: 100%;  
+    &-container {
+        display: grid;
+        // grid-template-columns: 86px auto;
+        grid-template-columns: 66px auto;
+        font-family: $font-secondary;
+
+        &__full {
+
+            &-navbar {
+                border-bottom: 1.6px solid $table-border-primary;
             }
+            
+            &-base {
+                background-color: #fff;
+                // height: calc(100vh - 60px - 40px);
+                height: calc(100vh - 80px - 50px);
+                // padding: 10px;
+                
+                &-panel {
+                    height: 100%;  
+                }
+            }
+        }
+
+        &__left-nav {
+            border-right: 1.6px solid $table-border-primary;
         }
     }
 
-    &__left-nav {
-        background-color: blueviolet;
-        border: 1px solid blue;
-    }
 }
