@@ -1,34 +1,59 @@
+@import '../variables';
+
 .navbar-container {
-    background-color: blueviolet;
-    height: 60px;
+    height: 80px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 
-    &__slogan {
-        // background-color: blue;
-        // width: 100px;
-    }
-
     &__acount {
-        background-color: bisque;
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 15px;
+        gap: 30px;
 
-        &-greeting {
+        &-greeting, &-alerts {
             >p {
                 margin: 0;
             }
         }
 
-        &-image {
-            width: 40px;
-            height: 40px;
-            background-color: brown;
-            border-radius: 50%;
+        &-greeting {
+            @extend %text-primary;
+            margin-left: 30px;
+        }
+
+        &-alerts {
+            @extend %text-secondary;
+            
+            p {
+                color: $text-secondary;
+                opacity: 0.5;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            .text-blue {
+                color: #0b44c8;
+                opacity: 1;
+                font-weight: bolder;
+            }
+        }
+
+    }
+
+    &__icons {
+        width: 280px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .icon {
+            filter: invert(99%) sepia(81%) saturate(317%) hue-rotate(345deg) brightness(107%) contrast(92%);
         }
     }
 }

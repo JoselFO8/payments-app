@@ -1,3 +1,9 @@
+// font families
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500&family=Poppins:wght@300;400;500&family=Rubik:wght@300;400;500&display=swap');
+$font-primary: 'Rubik';
+$font-secondary: 'Mulish';
+$font-terciary: 'Poppins';
+
 // Colors
 $palette-primary: #4c20df;
 $palette-secondary: #9b65e2;
@@ -19,19 +25,19 @@ $table-border-primary: #85858580;
 }
 
 // Text
-%primary {
+%text-primary {
     font-size: 25px;
     color: $text-primary;
 }
-%secondary {
+%text-secondary {
     font-size: 17px;
     color: $text-primary;
 }
-%terciary {
+%text-terciary {
     font-size: 13px;
     color: $text-primary;
 }
-%quaternary {
+%text-quaternary {
     font-size: 11px;
     color: $text-terciary;
 }

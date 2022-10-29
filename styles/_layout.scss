@@ -1,22 +1,26 @@
-.layout {
-    display: grid;
-    grid-template-columns: 240px auto;
+@import './variables';
 
-    &-container {
-        background-color: grey;
+.layout-container {
+    display: grid;
+    grid-template-columns: 86px auto;
+    font-family: $font-secondary;
+
+    &__body {
         
-        &__body {
-            height: calc(100vh - 60px - 40px);
+        &-base {
+            background-color: #eeeeee;
+            // height: calc(100vh - 60px - 40px);
+            height: calc(100vh - 80px);
             padding: 10px;
             
-            &-left-nav {
-                background-color: blueviolet;
-                border: 1px solid blue;
-            }
-    
             &-panel {
-                background-color: cadetblue;    
+                height: 100%;  
             }
         }
+    }
+
+    &__left-nav {
+        background-color: blueviolet;
+        border: 1px solid blue;
     }
 }

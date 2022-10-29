@@ -29,8 +29,11 @@ ChartJS.register(
 const scores = [6, 5, 5, 5, 3, 4, 6, 4, 5];
 const scores2 = [0, 2, 4, 6, 4, 2, 7, 5, 6];
 const labels = [100, 200, 300, 400, 500, 600, 700, 800, 900]
+const bgColors = ['#ea80fc','#e040fb', '#d500f9', '#aa00ff', '#f8bbd0', '#f06292', '#ec407a', '#d81b60', '#1de9b6', '#00bfa5', '#e65100']
 const options = {
     responsive: true,
+    // Ajustar el grafico al tamaño del lienzo
+    maintainAspectRatio: false,
     // Decir que ingrese desde 0 en eje Y
     scales: {
         y: {
@@ -41,7 +44,7 @@ const options = {
     // Deshabilitar legenda
     plugins: {
         legend: {
-            display: false
+            display: true
         }
     }, 
 
@@ -61,7 +64,7 @@ export default function Graphyc() {
                     label: "Mis datos",
                     data: scores,
                     // Para que no sea tan recto, podemos suavisar con tension (valor entre 0 y 1)
-                    tension: 0.3,
+                    tension: 0.5,
 
                     // Cambiar el tamaño de los puntos del borde
                     pointRadius: 10,
@@ -69,7 +72,8 @@ export default function Graphyc() {
                     pointBackgroundColor: "rgb(255, 0, 0)", 
 
                     // Cambiar color del borde
-                    borderColor: "rgb(75, 20, 192)",
+                    // borderColor: "rgb(75, 20, 192)",
+                    borderColor: bgColors,
 
                     // Colorear el area del grafico
                     backgroundColor: "rgba(75, 20, 192,0.4)"
@@ -88,7 +92,8 @@ export default function Graphyc() {
                     pointBackgroundColor: "rgb(0, 0, 255)", 
 
                     // Cambiar color del borde
-                    borderColor: "rgb(75, 250, 192)",
+                    // borderColor: "rgb(75, 250, 192)",
+                    borderColor: bgColors,
 
                     // Colorear el area del grafico
                     backgroundColor: "rgba(75, 250, 192,0.4)"
@@ -100,13 +105,12 @@ export default function Graphyc() {
     }, [])
 
     return (
-        <div>
-            <p>Desde Graphyc</p>
-
+        <div className="graphyc-container">
             <Line 
                 data={data}
                 // Optios permite una serie de opciones como:
                 options={options}
+                className="graphyc-container-chart"
             ></Line>
         </div>
     )
