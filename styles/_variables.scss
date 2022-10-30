@@ -10,7 +10,7 @@ $palette-secondary: #cb65e2;
 $palette-terciary: #4c57e9;
 
 $text-primary: #030303;
-$text-secondary: #606060;
+$text-secondary: #404040;
 $text-terciary: #60606080;
 
 $table-border-primary: #e3e3e34b;
@@ -31,7 +31,7 @@ $table-border-primary: #e3e3e34b;
 }
 %text-secondary {
     font-size: 17px;
-    color: $text-primary;
+    color: $text-secondary;
 }
 %text-terciary {
     font-size: 15px;
@@ -47,12 +47,12 @@ $table-border-primary: #e3e3e34b;
     background-color: #3f3f3f;
     color: #d4d4d4;
     margin: 0px 4px;
-    padding: 5px 15px;
+    padding: 7px 18px;
     border: none;
-    border-radius: 5px;
+    border-radius: 7px;
+    box-shadow: 1px 1px 3px 1px #31313180 ;
 
     font-size: 14px;
-    // font-family: $font;
 }
 
 // Select

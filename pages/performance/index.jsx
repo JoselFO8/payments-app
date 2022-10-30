@@ -58,20 +58,28 @@ export default function Performance () {
                         <p className="performance-container__payments-consumed-row-secondary">$150.000.000</p>
                         <p className="performance-container__payments-consumed-row-secondary">$0</p>
                     </div>
-                    <progress 
-                        className="performance-container__payments-consumed-progress" 
-                        // id="file" 
-                        max="100" 
-                        value="70"
-                    > 70% </progress>
-                    <div className="performance-container__payments-consumed-row">
+                    <div className="performance-container__payments-consumed-bar">
+                        <progress 
+                            className="performance-container__payments-consumed-bar-progress" 
+                            // id="file" 
+                            max="100" 
+                            value="70"
+                        > 70% </progress>
+                    </div>
+                    <div className="performance-container__payments-consumed-row donw">
                         <p className="performance-container__payments-consumed-row-terciary">Proxima deuda a pagar</p>
                         <p className="performance-container__payments-consumed-row-terciary">07 de octubre de 2021</p>
                     </div>
                 </div>
 
                 <div className="performance-container__payments-payroll">
-                    <p className="performance-container__payments-payroll-secondary">Mis nominas</p>
+                    <div className="performance-container__payments-payroll-row">
+                        <p className="performance-container__payments-payroll-row-secondary">Mis nóminas</p>
+                        <select name="" id="" className='performance-container__payments-payroll-row-select'>
+                            <option value="" disabled selected>En proceso de revisión</option>
+                            <option value="prueba">Prueba</option>
+                        </select>
+                    </div>
                     
                     <div className="performance-container__payments-payroll-invoice">
                         <div className="performance-container__payments-payroll-invoice-date">
