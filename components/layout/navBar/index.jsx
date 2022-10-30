@@ -6,10 +6,12 @@ export default function Navbar () {
             <div className="navbar-container">
                 <div className="navbar-container__acount">
                     <div className="navbar-container__acount-greeting">
-                        <p><b>Hola, </b><span>Nombre Usuario</span></p>
+                        <h3><b>Hola, </b><span>Nombre Usuario</span></h3>
                     </div>
                     <div className="navbar-container__acount-alerts">
-                        <p>Tienes <a href="#!"><span className="text-blue">3 alertas</span></a> esperando por ti</p>
+                        <p>Tienes</p>
+                        <a href="#!"><span className="text-blue">3 alertas</span></a>
+                        <p>esperando por ti</p>
                     </div>
                 </div>
 
