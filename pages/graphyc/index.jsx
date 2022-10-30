@@ -44,7 +44,7 @@ const options = {
     // Deshabilitar legenda
     plugins: {
         legend: {
-            display: true
+            display: false
         }
     }, 
 
@@ -67,7 +67,7 @@ export default function Graphyc() {
                     tension: 0.5,
 
                     // Cambiar el tamaño de los puntos del borde
-                    pointRadius: 10,
+                    pointRadius: 0,
                     // --Cambiar su color de relleno
                     pointBackgroundColor: "rgb(255, 0, 0)", 
 
@@ -87,16 +87,16 @@ export default function Graphyc() {
                     tension: 0.3,
 
                     // Cambiar el tamaño de los puntos del borde
-                    pointRadius: 10,
+                    pointRadius: 0,
                     // --Cambiar su color de relleno
-                    pointBackgroundColor: "rgb(0, 0, 255)", 
+                    // pointBackgroundColor: "rgb(0, 0, 255)", 
 
                     // Cambiar color del borde
                     // borderColor: "rgb(75, 250, 192)",
                     borderColor: bgColors,
 
                     // Colorear el area del grafico
-                    backgroundColor: "rgba(75, 250, 192,0.4)"
+                    backgroundColor: "rgba(75, 250, 192,0)"
                 }
             ],
             // valores en eje X
@@ -110,7 +110,7 @@ export default function Graphyc() {
                 data={data}
                 // Optios permite una serie de opciones como:
                 options={options}
-                className="graphyc-container-chart"
+                // className="graphyc-container-chart"
             ></Line>
         </div>
     )

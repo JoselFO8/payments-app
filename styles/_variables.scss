@@ -1,12 +1,12 @@
 // font families
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500&family=Poppins:wght@300;400;500&family=Rubik:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;700&family=Rubik:wght@300;400;500&display=swap');
 $font-primary: 'Rubik';
 $font-secondary: 'Mulish';
 $font-terciary: 'Poppins';
 
 // Colors
 $palette-primary: #4c20df;
-$palette-secondary: #9b65e2;
+$palette-secondary: #cb65e2;
 $palette-terciary: #4c57e9;
 
 $text-primary: #030303;
@@ -26,7 +26,7 @@ $table-border-primary: #e3e3e34b;
 
 // Text
 %text-primary {
-    font-size: 25px;
+    font-size: 30px;
     color: $text-primary;
 }
 %text-secondary {
@@ -34,11 +34,11 @@ $table-border-primary: #e3e3e34b;
     color: $text-primary;
 }
 %text-terciary {
-    font-size: 13px;
+    font-size: 15px;
     color: $text-primary;
 }
 %text-quaternary {
-    font-size: 11px;
+    font-size: 13px;
     color: $text-terciary;
 }
 
@@ -53,4 +53,16 @@ $table-border-primary: #e3e3e34b;
 
     font-size: 14px;
     // font-family: $font;
+}
+
+// Select
+%select {
+    width: 220px;
+    height: 40px;
+
+    border: 2px solid rgb(18, 18, 18);
+    border-radius: 10px;
+    padding: 0 8px;
+
+    font-weight: bold;
 }

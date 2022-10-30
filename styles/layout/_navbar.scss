@@ -14,30 +14,35 @@
         gap: 30px;
 
         &-greeting, &-alerts {
-            >p {
+
+            >h2, p {
                 margin: 0;
             }
         }
 
         &-greeting {
             @extend %text-primary;
-            margin-left: 30px;
+            margin-left: 36px;
         }
 
         &-alerts {
-            @extend %text-secondary;
+            @extend %text-terciary;
+            display: flex;
+            align-items: center;
+            gap: 5px;
             
             p {
                 color: $text-secondary;
                 opacity: 0.5;
+                font-weight: bold;
             }
 
             a {
-                text-decoration: none;
+                text-decoration-line: none;
             }
 
             .text-blue {
-                color: #0b44c8;
+                color: #2360ef;
                 opacity: 1;
                 font-weight: bolder;
             }

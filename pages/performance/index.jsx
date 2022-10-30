@@ -1,4 +1,5 @@
 import Graphyc from '../graphyc/index'
+import Table from '../table'
 
 export default function Performance () {
     return (
@@ -7,7 +8,17 @@ export default function Performance () {
             <div className="performance-container__graphic">
                 <div className="performance-container__graphic-row">
                     <h4 className="performance-container__graphic-row-title">Performance</h4>
-                    <select name="" id="" className="performance-row-container__graphic-order"></select>
+                    <div className="performance-container__graphic-row-labels">
+                        {/* Puede haber mas de 1 label */}
+                        <div className="performance-container__graphic-row-labels-label">
+                            <div className="performance-container__graphic-row-labels-label-line"></div>
+                            <p className="performance-container__graphic-row-labels-label-name">Linea 1</p>
+                        </div>
+                    </div>
+                    <select name="" id="" className="performance-container__graphic-row-order">
+                        <option value="" disabled selected>Filtrar por</option>
+                        <option value="mes 1">mes 1</option>
+                    </select>
                 </div>
                 <div className="performance-container__graphic-statistics">
                     <Graphyc/>
@@ -17,56 +28,17 @@ export default function Performance () {
             <div className="performance-container__pending-payments">
                 {/* Crear en un componente aparte, de tal forma que se pueda reutilizar mediante el link mostrar todo */}
                 <div className="performance-container__pending-payments-row">
-                    <h4 className="performance-container__pending-payments-title">Facturas por pagar</h4>
-                    <a href="" className="performance-container__pending-payments-link">Ver todo</a>
+                    <h4 className="performance-container__pending-payments-row-title">Facturas por pagar</h4>
+                    <a href="" className="performance-container__pending-payments-row-link">VER TODO</a>
                 </div>
-                <table className="table table-striped performance-container__pending-payments-table">
-                    <thead className="head">
-                        <tr>
-                            <th scope="col">N° Folio</th>
-                            <th scope="col">Proveedor</th>
-                            <th scope="col">Tipo</th>
-                            <th scope="col">Monto</th>
-                            <th scope="col">Fecha de pago</th>
-                        </tr>
-                    </thead>
-                    
-                    <tbody>
-                        <tr>
-                            {/* <th scope="row">1</th> */}
-                            <td className='num'>654654</td>
-                            <td>Soc import Y Export Bach Ltda</td>
-                            <td>Cedida</td>
-                            <td className='num'>$100.448.159</td>
-                            <td>Fecha de pago</td>
-                        </tr>
-                    </tbody>
-                    <tbody>
-                        <tr>
-                            {/* <th scope="row">1</th> */}
-                            <td className='num'>654654</td>
-                            <td>Soc import Y Export Bach Ltda</td>
-                            <td>Cedida</td>
-                            <td className='num'>$100.448.159</td>
-                            <td>Fecha de pago</td>
-                        </tr>
-                    </tbody>
-                    <tbody>
-                        <tr>
-                            {/* <th scope="row">1</th> */}
-                            <td className='num'>654654</td>
-                            <td>Soc import Y Export Bach Ltda</td>
-                            <td>Cedida</td>
-                            <td className='num'>$100.448.159</td>
-                            <td>Fecha de pago</td>
-                        </tr>
-                    </tbody>
-                </table>
+                
+                <Table/>
+
             </div>
 
             <div className="performance-container__payments">
                 <div className="performance-container__payments-row">
-                    <h4 className="performance-container__payments-row-title">Payments</h4>
+                    <h2 className="performance-container__payments-row-title">Payments</h2>
                 </div>
 
                 <p className="performance-container__payments-secondary">Linea de credito</p>

@@ -1,0 +1,48 @@
+.table {
+    width: 100%;
+    height: 100%;
+    
+    &-container {
+        width: 100%;
+        height: 100%;
+        overflow-x: auto;
+    
+        position: relative;
+    
+        &-on {
+            background-color: rgba(172, 172, 255, 0.3);
+            width: 100%;
+            height: 60px;
+            border-radius: 10px;
+            
+            position: absolute;
+            top: 15px;
+
+            z-index: 0;
+        }
+    
+        &-components {
+            position: absolute;
+            width: calc(100% - 20px);
+            min-width: 900px;
+            margin-left: 20px;
+        
+            thead {
+                height: 90px;
+                border: none;
+            }
+            
+            tbody {
+                height: 60px;
+                border: none;
+            }
+        
+            .num {
+                font-family: $font-terciary;
+            }
+        }
+    }
+}
+
+
+
