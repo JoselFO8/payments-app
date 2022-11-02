@@ -6,7 +6,7 @@ export default function Table() {
                 <table className="table-container-components">
                     <thead>
                         <tr>
-                            <th><th><input type="radio" /></th></th>
+                            <th><input type="radio" /></th>
                             <th>N° Folio</th>
                             <th>Proveedor</th>
                             <th>Tipo</th>
