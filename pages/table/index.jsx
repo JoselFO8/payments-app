@@ -1,4 +1,30 @@
-export default function Table() {
+export default function Table({tableData}) {
+
+    const renderColumns = (
+        tableData.columns.map((c) => {
+            return (
+                <th>{c}</th>
+            )
+        })
+    )
+
+    const renderRows = (
+        tableData.rows.map((r) => {
+           return (
+                <tbody>
+                    <tr>
+                        <th><input type="radio" /></th>
+                        <td className='num'>{r.folio}</td>
+                        <td>{r.proveedor}</td>
+                        <td>{r.tipo}</td>
+                        <td className='num'>{`$${r.monto}`}</td>
+                        <td>{r.fechaDePago}</td>
+                    </tr>
+                </tbody>
+            )
+        })
+    )
+    
     return (
         <div className="table">
             <div className="table-container">
@@ -7,45 +33,12 @@ export default function Table() {
                     <thead>
                         <tr>
                             <th><input type="radio" /></th>
-                            <th>N° Folio</th>
-                            <th>Proveedor</th>
-                            <th>Tipo</th>
-                            <th>Monto</th>
-                            <th>Fecha de pago</th>
+                            {renderColumns}
                         </tr>
                     </thead>
-                    
-                    <tbody>
-                        <tr>
-                            {/* <th scope="row">1</th> */}
-                            <th><input type="radio" /></th>
-                            <td className='num'>654654</td>
-                            <td>Soc import Y Export Bach Ltda</td>
-                            <td>Cedida</td>
-                            <td className='num'>$100.448.159</td>
-                            <td>Fecha de pago</td>
-                        </tr>
-                    </tbody>
-                    <tbody>
-                        <tr>
-                            <th><input type="radio" /></th>
-                            <td className='num'>654654</td>
-                            <td>Soc import Y Export Bach Ltda</td>
-                            <td>Cedida</td>
-                            <td className='num'>$100.448.159</td>
-                            <td>Fecha de pago</td>
-                        </tr>
-                    </tbody>
-                    <tbody>
-                        <tr>
-                            <th><input type="radio" /></th>
-                            <td className='num'>654654</td>
-                            <td>Soc import Y Export Bach Ltda</td>
-                            <td>Cedida</td>
-                            <td className='num'>$100.448.159</td>
-                            <td>Fecha de pago</td>
-                        </tr>
-                    </tbody>
+
+                    {renderRows}
+
                 </table>
             </div>
         </div>

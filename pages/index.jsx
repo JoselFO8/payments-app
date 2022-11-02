@@ -13,7 +13,8 @@ export default function Performance () {
             columns: [ 'N° Folio', 'Proveedor', 'Tipo', 'Monto', 'Fecha de pago' ],
             rows: [ 
                 { folio: 6574743, proveedor: 'Soc. Import. Y Exp. Bash Ltda.', tipo: 'Cedida', monto: 100448159, fechaDePago: '21-10-15' },
-                { folio: 6574742, proveedor: 'Soc. Import. Y Exp. Bash Ltda.', tipo: 'Cedida', monto: 120648209, fechaDePago: '21-10-07' },
+                { folio: 6574742, proveedor: 'Cairns & associates S.A.', tipo: 'in process', monto: 200500000, fechaDePago: '21-10-07' },
+                { folio: 6574741, proveedor: 'Soc. Import. Y Exp. Bash Ltda.', tipo: 'Cedida', monto: 80789100, fechaDePago: '21-10-01' },
             ]
         }
     }
@@ -29,6 +30,10 @@ export default function Performance () {
                         <div className="performance-container__graphic-row-labels-label">
                             <div className="performance-container__graphic-row-labels-label-line"></div>
                             <p className="performance-container__graphic-row-labels-label-name">Linea 1</p>
+                        </div>
+                        <div className="performance-container__graphic-row-labels-label">
+                            <div className="performance-container__graphic-row-labels-label-line"></div>
+                            <p className="performance-container__graphic-row-labels-label-name">Linea 2</p>
                         </div>
                     </div>
                     <select name="" id="" className="performance-container__graphic-row-order">
@@ -48,7 +53,7 @@ export default function Performance () {
                     <a href="" className="performance-container__pending-payments-row-link">VER TODO</a>
                 </div>
                 
-                <Table/>
+                <Table tableData={data.tableData}/>
 
             </div>
 
@@ -79,7 +84,7 @@ export default function Performance () {
                             className="performance-container__payments-consumed-bar-progress" 
                             // id="file" 
                             max="100" 
-                            value="70"
+                            value="100"
                         > 70% </progress>
                     </div>
                     <div className="performance-container__payments-consumed-row donw">
