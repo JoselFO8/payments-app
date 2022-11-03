@@ -1,10 +1,11 @@
 @import './variables';
 
 .performance-container {
-    background-color: #fff;
+    // background-color: #fff;
     height: 100%;
+    width: 100%;
     display: grid;
-    grid-template-columns: 62.5% 36.5%;
+    grid-template-columns: 62% 38%;
     grid-template-rows: 56% 44%;
 
     &__graphic {
@@ -62,12 +63,20 @@
     }
 
     &__pending-payments {
+        // background-color: rgb(206, 206, 206);
+        width: 100%;
+        height: 100%;
+
         grid-column: 1/2;
         grid-row: 2/3;
-        padding: 25px 35px;
+        padding: 25px 35px 0;
         // border: 1px solid $table-border-primary;
 
+        display: grid;
+        grid-template-rows: 17% auto;
+
         &-row {
+            // background-color: cadetblue;
             @extend %head-row;
 
             &-title {
@@ -83,14 +92,43 @@
                 color: $palette-primary;
             }
         }
+
+        &-table {
+            // background-color: bisque;
+            width: 100%;
+            height: 100%;
+            position: relative;
+
+            &-on {
+                background-color: rgba(70, 113, 255, 0.1);
+    
+                width: 100%;
+                height: 60px;
+                border-radius: 10px;
+                
+                position: absolute;
+                top: 8px;
+    
+                z-index: 1;
+            }
+
+            &-component {
+                height: 100%;
+                width: 100%;
+                z-index: 0;
+            }
+        }
     }
 
     &__payments {
+        // background-color: blanchedalmond;
         grid-column: 2/3;
         grid-row: 1/3;
         // background-color: burlywood;
-        padding: 50px 50px 45px 35px;
+        padding: 50px 50px 10px 35px;
         border-left: 1.6px solid $table-border-primary;
+
+        overflow-y: auto;
 
         &-row, &-line {
             @extend %head-row;
@@ -191,6 +229,8 @@
         }
 
         &-payroll {
+            // background-color: chocolate;
+            // height: 100%;
             margin-top: 45px;
             &-row {
                 @extend %head-row;
@@ -207,7 +247,10 @@
             }
 
             &-invoice {
-                margin-top: 46px;
+                width: 100%;
+                height: 100%;
+                
+                margin-top: 38px;
                 margin-left: 21px;
                 
                 &-date {
@@ -216,25 +259,39 @@
                 }
     
                 &-table {
-                    .head {
-                        @extend %text-quaternary;
-                        border: none;
-                    }
-                    
-                    .borders {
-                        border: none;
-                        border-left: 1px solid $table-border-primary;
-                        border-right: 1px solid $table-border-primary;
-                    }
+                    width: 100%;
+                    height: 90px;
+                    position: relative;
+                    overflow-x: auto;
 
-                    .num {
-                        font-family: $font-terciary;
-                    }
+                    &-container {
+                        // background-color: bisque;
+                        position: absolute;
+                        // width: 100%;
+                        width: calc(100% - 20px);
+                        min-width: 500px;
+                        // overflow-x: auto;
     
-                    .body {
-                        @extend %text-terciary;
-                        font-weight: bold;
-                        border: none;
+                        .head {
+                            @extend %text-quaternary;
+                            border: none;
+                        }
+                        
+                        .borders {
+                            border: none;
+                            border-left: 1px solid $table-border-primary;
+                            border-right: 1px solid $table-border-primary;
+                        }
+    
+                        .num {
+                            font-family: $font-terciary;
+                        }
+        
+                        .body {
+                            @extend %text-terciary;
+                            font-weight: bold;
+                            border: none;
+                        }
                     }
                 }
 
@@ -242,3 +299,341 @@
         }
     }
 }
+
+@media screen and (max-width: 1200px) {
+    .performance-container {
+        grid-template-rows: auto auto auto;
+
+    
+        &__graphic {
+            grid-column: 1/3;
+            grid-row: 2/3;
+    
+            &-statistics {
+                width: 98%;
+                height: 300px;
+            }
+        }
+    
+        &__pending-payments {
+            grid-column: 1/3;
+            grid-row: 3/4;
+            
+            &-table {
+            
+                &-component {
+                    height: 270px;
+                }
+            }
+        }
+    
+        &__payments {
+            grid-column: 1/3;
+            grid-row: 1/2;
+        }
+    
+    }
+}
+
+// @media screen and (max-width: 700px) {
+//     .performance-container {
+//         // display: flex;
+//         // grid-template-columns: 62% 38%;
+//         grid-template-rows: auto auto auto;
+
+    
+//         &__graphic {
+//             width: 100%;
+//             //
+//             grid-column: 1/3;
+//             grid-row: 2/3;
+//             padding: 60px 36px 26px;
+//             // border: 1px solid $table-border-primary;
+    
+//             display: grid;
+//             grid-template-rows: 10% 90%;
+    
+//             &-row {
+//                 @extend %head-row;
+    
+//                 &-title {
+//                     font-weight: bold;
+//                 }
+    
+//                 &-labels {
+//                     display: flex;
+//                     flex-direction: row;
+//                     align-items: center;
+//                     gap: 30px;
+    
+//                     &-label {
+//                         display: flex;
+//                         flex-direction: row;
+//                         align-items: center;
+//                         justify-content: center;
+//                         gap: 5px;
+                            
+//                         &-line {
+//                             background-color: rgb(212, 127, 23);
+//                             width: 25px;
+//                             height: 5px;
+//                         }
+    
+//                         &-name {
+//                             @extend %text-quaternary;
+//                             margin: 0;
+//                         }
+//                     }
+//                 }
+    
+//                 &-order {
+//                     @extend %select;
+//                 }
+//             }
+    
+//             &-statistics {
+//                 width: 98%;
+//                 height: 300px;
+//             }
+//         }
+    
+//         &__pending-payments {
+//             // background-color: rgb(206, 206, 206);
+//             width: 100%;
+//             height: 100%;
+    
+//             grid-column: 1/3;
+//             grid-row: 3/4;
+//             padding: 25px 35px 0;
+//             // border: 1px solid $table-border-primary;
+    
+//             display: grid;
+//             grid-template-rows: 17% auto;
+    
+//             &-row {
+//                 // background-color: cadetblue;
+//                 @extend %head-row;
+    
+//                 &-title {
+//                     font-weight: bold;
+//                 }
+    
+//                 &-link {
+//                     @extend %text-terciary;
+//                     text-decoration: none;
+//                     color: $palette-secondary;
+//                     font-weight: bolder;
+//                 }:hover {
+//                     color: $palette-primary;
+//                 }
+//             }
+    
+//             &-table {
+//                 // background-color: bisque;
+//                 width: 100%;
+//                 height: 100%;
+//                 position: relative;
+    
+//                 &-on {
+//                     background-color: rgba(70, 113, 255, 0.1);
+        
+//                     width: 100%;
+//                     height: 60px;
+//                     border-radius: 10px;
+                    
+//                     position: absolute;
+//                     top: 8px;
+        
+//                     z-index: 1;
+//                 }
+    
+//                 &-component {
+//                     // background-color: bisque;
+//                     height: 270px;
+//                     width: 100%;
+//                     z-index: 0;
+//                 }
+//             }
+//         }
+    
+//         &__payments {
+//             // background-color: blanchedalmond;
+//             grid-column: 1/3;
+//             grid-row: 1/2;
+//             // background-color: burlywood;
+//             padding: 50px 50px 10px 35px;
+//             border-left: 1.6px solid $table-border-primary;
+    
+//             overflow-y: auto;
+    
+//             &-row, &-line {
+//                 @extend %head-row;
+//             }
+    
+//             &-secondary {
+//                 @extend %text-secondary;
+//                 font-weight: bold;
+//             }
+    
+//             &-row {
+//                 &-title {
+//                     font-family: $font-primary; 
+//                 }
+//             }
+    
+//             &-line {
+    
+//                 &-primary {
+//                     @extend %text-primary;
+//                     margin: 0;
+//                     font-weight: bolder;
+//                     color: $palette-secondary;
+//                     font-family: $font-terciary;
+//                 }
+    
+//                 &-button {
+//                     @extend %button;
+//                     background-color: $palette-primary;
+    
+//                     &:hover {
+//                         background-color: $palette-secondary;
+//                     }
+//                 }
+//             }
+    
+//             &-consumed {
+//                 // background-color: bisque;
+//                 padding: 20px 35px 5px 20px;
+//                 box-shadow: 1px 1px 3px 1px #6c6c6c4d;
+//                 margin-bottom: 18px;
+    
+//                 &-row {
+//                     display: flex;
+//                     flex-direction: row;
+//                     align-items: center;
+//                     justify-content: space-between;
+    
+//                     &-secondary {
+//                         @extend %text-secondary;
+//                         font-weight: bold;
+//                         font-family: $font-terciary;
+//                         margin: 0;
+//                         margin-bottom: 8px;
+//                     }
+//                     &-terciary {
+//                         @extend %text-terciary;
+//                     }
+//                     &-quaternary {
+//                         @extend %text-quaternary;
+//                         margin: 0;
+//                         margin-bottom: 3px;
+//                     }
+//                 }
+    
+//                 &-bar {
+//                     padding-bottom: 15px;
+//                     border-bottom: 1px solid $table-border-primary;
+    
+//                     &-progress {
+//                         width: 100%;
+//                         height: 13px;
+                        
+//                         // Reset styles
+//                         appearance: none;
+//                         -webkit-appearance: none;
+//                         -moz-appearance: none;
+                      
+//                         // Remove border in firefox
+//                         border: none;
+        
+//                         &::-webkit-progress-bar {
+//                             background-color: $palette-primary;
+//                             border-radius: 8px;
+//                         }
+        
+//                         &::-webkit-progress-value {
+//                             background-color: $palette-secondary;
+//                             border-radius: 8px;
+//                         }
+//                     }
+//                 }
+    
+//                 .donw {
+//                     margin-top: 20px;
+//                     font-weight: bold;
+//                 }
+//             }
+    
+//             &-payroll {
+//                 // background-color: chocolate;
+//                 // height: 100%;
+//                 margin-top: 45px;
+//                 &-row {
+//                     @extend %head-row;
+                    
+//                     &-secondary {
+//                         margin: 0;
+//                         @extend %text-secondary;
+//                         font-weight: bold;
+//                     }
+    
+//                     &-select {
+//                         @extend %select;
+//                     }
+//                 }
+    
+//                 &-invoice {
+//                     width: 100%;
+//                     height: 100%;
+                    
+//                     margin-top: 38px;
+//                     margin-left: 21px;
+                    
+//                     &-date {
+//                         @extend %text-terciary;
+//                         font-weight: bold;
+//                     }
+        
+//                     &-table {
+//                         width: 100%;
+//                         height: 90px;
+//                         position: relative;
+//                         overflow-x: auto;
+    
+//                         &-container {
+//                             // background-color: bisque;
+//                             position: absolute;
+//                             // width: 100%;
+//                             width: calc(100% - 20px);
+//                             min-width: 500px;
+//                             // overflow-x: auto;
+        
+//                             .head {
+//                                 @extend %text-quaternary;
+//                                 border: none;
+//                             }
+                            
+//                             .borders {
+//                                 border: none;
+//                                 border-left: 1px solid $table-border-primary;
+//                                 border-right: 1px solid $table-border-primary;
+//                             }
+        
+//                             .num {
+//                                 font-family: $font-terciary;
+//                             }
+            
+//                             .body {
+//                                 @extend %text-terciary;
+//                                 font-weight: bold;
+//                                 border: none;
+//                             }
+//                         }
+//                     }
+    
+//                 }
+//             }
+//         }
+    
+//     }
+// }

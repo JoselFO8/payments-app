@@ -9,19 +9,6 @@
     
         position: relative;
     
-        &-on {
-            background-color: rgba(70, 113, 255, 0.1);
-
-            width: 100%;
-            height: 60px;
-            border-radius: 10px;
-            
-            position: absolute;
-            top: 15px;
-
-            z-index: 0;
-        }
-    
         &-components {
             position: absolute;
             width: calc(100% - 20px);
@@ -29,7 +16,7 @@
             margin-left: 20px;
         
             thead {
-                height: 90px;
+                height: 75px;
                 border: none;
             }
             

@@ -41,9 +41,6 @@ export default function Layout (props) {
                         </div>
                     </main>
 
-                    {/* <footer className="layout-container__footer">
-                        <Footer/>
-                    </footer> */}
                 </div>
 
             

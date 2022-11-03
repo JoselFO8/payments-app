@@ -1,9 +1,12 @@
+import React, { useState, useEffect } from "react"
+
 export default function Table({tableData}) {
+    
 
     const renderColumns = (
-        tableData.columns.map((c) => {
+        tableData.columns.map((c, index) => {
             return (
-                <th>{c}</th>
+                <th key={index} >{c}</th>
             )
         })
     )
@@ -11,7 +14,7 @@ export default function Table({tableData}) {
     const renderRows = (
         tableData.rows.map((r) => {
            return (
-                <tbody>
+                <tbody key={r.folio} >
                     <tr>
                         <th><input type="radio" /></th>
                         <td className='num'>{r.folio}</td>
@@ -28,7 +31,6 @@ export default function Table({tableData}) {
     return (
         <div className="table">
             <div className="table-container">
-                <div className="table-container-on"/>
                 <table className="table-container-components">
                     <thead>
                         <tr>
@@ -45,3 +47,8 @@ export default function Table({tableData}) {
 
     )
 }
+
+// Pendiente
+// 1. cambiar colores de las lineas mediante array en <SASS></SASS>
+// 2. cuadrar la parte del fondo de las columnas azul en table, tal vez directamente en performance no afecte el responsive
+// 3. hacer la pagina responsive 

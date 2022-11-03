@@ -13,8 +13,8 @@ export default function Performance () {
             columns: [ 'N° Folio', 'Proveedor', 'Tipo', 'Monto', 'Fecha de pago' ],
             rows: [ 
                 { folio: 6574743, proveedor: 'Soc. Import. Y Exp. Bash Ltda.', tipo: 'Cedida', monto: 100448159, fechaDePago: '21-10-15' },
-                { folio: 6574742, proveedor: 'Cairns & associates S.A.', tipo: 'in process', monto: 200500000, fechaDePago: '21-10-07' },
-                { folio: 6574741, proveedor: 'Soc. Import. Y Exp. Bash Ltda.', tipo: 'Cedida', monto: 80789100, fechaDePago: '21-10-01' },
+                { folio: 6574742, proveedor: 'Cairns & associates S.A.', tipo: 'In process', monto: 200500000, fechaDePago: '21-10-07' },
+                { folio: 6574741, proveedor: 'Actions and services S.A.S.', tipo: 'Cedida', monto: 80789100, fechaDePago: '21-10-01' },
             ]
         }
     }
@@ -38,7 +38,6 @@ export default function Performance () {
                     </div>
                     <select name="" id="" className="performance-container__graphic-row-order">
                         <option value="" disabled selected>Filtrar por</option>
-                        <option value="mes 1">mes 1</option>
                     </select>
                 </div>
                 <div className="performance-container__graphic-statistics">
@@ -53,7 +52,12 @@ export default function Performance () {
                     <a href="" className="performance-container__pending-payments-row-link">VER TODO</a>
                 </div>
                 
-                <Table tableData={data.tableData}/>
+                <div className="performance-container__pending-payments-table">
+                    <div className="performance-container__pending-payments-table-on"/>
+                    <div className='performance-container__pending-payments-table-component'>
+                        <Table tableData={data.tableData}/>
+                    </div>
+                </div>
 
             </div>
 
@@ -98,7 +102,6 @@ export default function Performance () {
                         <p className="performance-container__payments-payroll-row-secondary">Mis nóminas</p>
                         <select name="" id="" className='performance-container__payments-payroll-row-select'>
                             <option value="" disabled selected>En proceso de revisión</option>
-                            <option value="prueba">Prueba</option>
                         </select>
                     </div>
                     
@@ -107,25 +110,27 @@ export default function Performance () {
                             <p>Facturas del 07 Octubre</p>
                         </div>
                         <div className="performance-container__payments-payroll-invoice-table">
-                            <table className="table table-hover">
-                                <thead className="head">
-                                    <tr>
-                                        <th className="borders" scope="col">Facturas</th>
-                                        <th className="borders" scope="col">Proveedores</th>
-                                        <th className="borders" scope="col">Monto</th>
-                                        <th className="borders" scope="col">Fecha de pago</th>
-                                    </tr>
-                                </thead>
-                                
-                                <tbody className="body">
-                                    <tr>
-                                        <td className="borders num">238</td>
-                                        <td className="borders num">32</td>
-                                        <td className="borders num">$148017159</td>
-                                        <td className="borders num">07 Oct. 2021</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div className="performance-container__payments-payroll-invoice-table-container">
+                                <table className="table table-hover">
+                                    <thead className="head">
+                                        <tr>
+                                            <th className="borders" scope="col">Facturas</th>
+                                            <th className="borders" scope="col">Proveedores</th>
+                                            <th className="borders" scope="col">Monto</th>
+                                            <th className="borders" scope="col">Fecha de pago</th>
+                                        </tr>
+                                    </thead>
+                                    
+                                    <tbody className="body">
+                                        <tr>
+                                            <td className="borders num">238</td>
+                                            <td className="borders num">32</td>
+                                            <td className="borders num">$1480171590</td>
+                                            <td className="borders num">07 Oct. 2021</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                     <div className="performance-container__payments-payroll-invoice">
@@ -133,25 +138,27 @@ export default function Performance () {
                             <p>Facturas del 07 Octubre</p>
                         </div>
                         <div className="performance-container__payments-payroll-invoice-table">
-                            <table className="table table-hover">
-                                <thead className="head">
-                                    <tr>
-                                        <th className="borders" scope="col">Facturas</th>
-                                        <th className="borders" scope="col">Proveedores</th>
-                                        <th className="borders" scope="col">Monto</th>
-                                        <th className="borders" scope="col">Fecha de pago</th>
-                                    </tr>
-                                </thead>
-                                
-                                <tbody className="body">
-                                    <tr>
-                                        <td className="borders num">238</td>
-                                        <td className="borders num">32</td>
-                                        <td className="borders num">$148017159</td>
-                                        <td className="borders num">07 Oct. 2021</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div className="performance-container__payments-payroll-invoice-table-container">
+                                <table className="table table-hover">
+                                    <thead className="head">
+                                        <tr>
+                                            <th className="borders" scope="col">Facturas</th>
+                                            <th className="borders" scope="col">Proveedores</th>
+                                            <th className="borders" scope="col">Monto</th>
+                                            <th className="borders" scope="col">Fecha de pago</th>
+                                        </tr>
+                                    </thead>
+                                    
+                                    <tbody className="body">
+                                        <tr>
+                                            <td className="borders num">238</td>
+                                            <td className="borders num">32</td>
+                                            <td className="borders num">$1800930210</td>
+                                            <td className="borders num">07 Oct. 2021</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
 

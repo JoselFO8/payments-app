@@ -1,11 +1,14 @@
 @import './variables';
 
 .layout {
-    margin: 30px 50px 30px 50px;
+    height: 100vh;
+    width: 100vw ;
+    padding: 30px 40px;
 
     &-container {
+        height: 100%;
+        width: 100%;
         display: grid;
-        // grid-template-columns: 86px auto;
         grid-template-columns: 66px auto;
         font-family: $font-secondary;
 
@@ -16,14 +19,10 @@
             }
             
             &-base {
-                background-color: #fff;
-                // height: calc(100vh - 60px - 40px);
-                height: calc(100vh - 80px - 50px);
-                // padding: 10px;
+                height: 100%;
                 
                 &-panel {
-                    // background-color: gray;
-                    height: 100%;  
+                    height: calc(100vh - 68px - 60px);
                 }
             }
         }
@@ -33,4 +32,23 @@
         }
     }
 
+}
+
+@media screen and (max-width: 1200px) {
+    .layout {
+        
+        &-container {
+    
+            &__full {
+                
+                &-base {
+                    
+                    &-panel {
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    
+    }
 }

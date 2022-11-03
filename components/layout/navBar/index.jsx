@@ -4,9 +4,20 @@ export default function Navbar () {
     return (
         <div>
             <div className="navbar-container">
+                <div className="navbar-container__slogan">
+                    <a href='/performance'>
+                        <Image 
+                            src="/slogan/Slogan.png"
+                            alt="Payments slogan"
+                            width={40}
+                            height={45}
+                        />
+                    </a>
+                </div>
+
                 <div className="navbar-container__acount">
                     <div className="navbar-container__acount-greeting">
-                        <h3><b>Hola, </b><span>Nombre Usuario</span></h3>
+                        <h3><b>Hola, </b><span>Cosme Fulanito</span></h3>
                     </div>
                     <div className="navbar-container__acount-alerts">
                         <p>Tienes</p>
