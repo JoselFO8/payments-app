@@ -47,8 +47,3 @@ export default function Table({tableData}) {
 
     )
 }
-
-// Pendiente
-// 1. cambiar colores de las lineas mediante array en <SASS></SASS>
-// 2. cuadrar la parte del fondo de las columnas azul en table, tal vez directamente en performance no afecte el responsive
-// 3. hacer la pagina responsive 

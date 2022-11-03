@@ -39,9 +39,13 @@
                     gap: 5px;
                         
                     &-line {
-                        background-color: rgb(212, 127, 23);
-                        width: 25px;
-                        height: 5px;
+                        @each $line, $color in $lines {
+                            &-#{$line} {
+                                background-color: $color;
+                                width: 25px;
+                                height: 5px;
+                            }
+                        }
                     }
 
                     &-name {

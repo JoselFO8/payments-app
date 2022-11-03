@@ -15,6 +15,17 @@ $text-terciary: #60606080;
 
 $table-border-primary: #e3e3e34b;
 
+// Graphic - Line colors
+$lines: (
+    '0': #E39EC9,
+    '1': #E5A662,
+    '2': #e67b00, 
+    '3': #ec407a, 
+    '4': #e2e600,
+    '5': #1de9b6, 
+    '6': #0053bf
+);
+
 // Header
 %head-row {
     display: flex;

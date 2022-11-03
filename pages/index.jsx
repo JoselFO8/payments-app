@@ -18,7 +18,19 @@ export default function Performance () {
             ]
         }
     }
-    
+
+    // console.log('Prueba', Object.keys(data.chartData).filter(i => i.includes('item')) )
+    const renderLines = (
+        Object.keys(data.chartData).filter(i => i.includes('item')).map((i, index) => {
+           return (
+                <div className="performance-container__graphic-row-labels-label" key={i}>
+                    <div className={`performance-container__graphic-row-labels-label-line-${index}`}></div>
+                    <p className="performance-container__graphic-row-labels-label-name">{`Linea ${index + 1}`}</p>
+                </div>
+            )
+        })
+    )
+
     return (
         <div className="performance-container">
  
@@ -26,15 +38,8 @@ export default function Performance () {
                 <div className="performance-container__graphic-row">
                     <h4 className="performance-container__graphic-row-title">Performance</h4>
                     <div className="performance-container__graphic-row-labels">
-                        {/* Puede haber mas de 1 label */}
-                        <div className="performance-container__graphic-row-labels-label">
-                            <div className="performance-container__graphic-row-labels-label-line"></div>
-                            <p className="performance-container__graphic-row-labels-label-name">Linea 1</p>
-                        </div>
-                        <div className="performance-container__graphic-row-labels-label">
-                            <div className="performance-container__graphic-row-labels-label-line"></div>
-                            <p className="performance-container__graphic-row-labels-label-name">Linea 2</p>
-                        </div>
+                        {/* Line colors */}
+                        {renderLines}
                     </div>
                     <select name="" id="" className="performance-container__graphic-row-order">
                         <option value="" disabled selected>Filtrar por</option>
