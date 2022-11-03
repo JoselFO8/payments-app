@@ -1,5 +1,6 @@
 import Graphyc from './graphyc/index'
 import Table from './table/index'
+import formatNumber from '../services/formatNumber'
 
 export default function Performance () {
     const data = {
@@ -19,7 +20,6 @@ export default function Performance () {
         }
     }
 
-    // console.log('Prueba', Object.keys(data.chartData).filter(i => i.includes('item')) )
     const renderLines = (
         Object.keys(data.chartData).filter(i => i.includes('item')).map((i, index) => {
            return (
@@ -51,7 +51,6 @@ export default function Performance () {
             </div>
 
             <div className="performance-container__pending-payments">
-                {/* Crear en un componente aparte, de tal forma que se pueda reutilizar mediante el link mostrar todo */}
                 <div className="performance-container__pending-payments-row">
                     <h4 className="performance-container__pending-payments-row-title">Facturas por pagar</h4>
                     <a href="" className="performance-container__pending-payments-row-link">VER TODO</a>
@@ -74,7 +73,7 @@ export default function Performance () {
                 <p className="performance-container__payments-secondary">Linea de credito</p>
 
                 <div className="performance-container__payments-line">
-                    <p className="performance-container__payments-line-primary">$150.000.000</p>
+                    <p className="performance-container__payments-line-primary">${formatNumber(150000000)}</p>
                     <button className="performance-container__payments-line-button">Incrementar linea</button>
                 </div>
 
@@ -85,7 +84,7 @@ export default function Performance () {
                         <p className="performance-container__payments-consumed-row-quaternary">Disponible</p>
                     </div>
                     <div className="performance-container__payments-consumed-row">
-                        <p className="performance-container__payments-consumed-row-secondary">$150.000.000</p>
+                        <p className="performance-container__payments-consumed-row-secondary">${formatNumber(150000000)}</p>
                         <p className="performance-container__payments-consumed-row-secondary">$0</p>
                     </div>
                     <div className="performance-container__payments-consumed-bar">
@@ -130,7 +129,7 @@ export default function Performance () {
                                         <tr>
                                             <td className="borders num">238</td>
                                             <td className="borders num">32</td>
-                                            <td className="borders num">$1480171590</td>
+                                            <td className="borders num">${formatNumber(1480171590)}</td>
                                             <td className="borders num">07 Oct. 2021</td>
                                         </tr>
                                     </tbody>
@@ -158,7 +157,7 @@ export default function Performance () {
                                         <tr>
                                             <td className="borders num">238</td>
                                             <td className="borders num">32</td>
-                                            <td className="borders num">$1800930210</td>
+                                            <td className="borders num">${formatNumber(1800930210)}</td>
                                             <td className="borders num">07 Oct. 2021</td>
                                         </tr>
                                     </tbody>
@@ -174,3 +173,6 @@ export default function Performance () {
         </div>
     )
 }
+
+// Corregir como se presentan los numeros en la tabla, separar por puntos
+// Hacer filtros en la tabla segun columna

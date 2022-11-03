@@ -16,7 +16,7 @@
             margin-left: 20px;
         
             thead {
-                height: 75px;
+                height: 60px;
                 border: none;
             }
             
@@ -24,10 +24,27 @@
                 height: 60px;
                 border: none;
             }
+
+            .th:hover {
+                border-bottom: 4px solid rgb(75, 100, 245, 0.5);
+                cursor: pointer;
+            }
         
             .num {
                 font-family: $font-terciary;
             }
+        }
+    }
+
+    &-loader {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+
+        p {
+            margin: 0;
         }
     }
 }
@@ -50,6 +67,11 @@
                     font-size: 0.8rem;
                 }
             }
+        }
+
+        &-loader {
+            height: 30px;
+            margin-top: 8px;
         }
     }
 }

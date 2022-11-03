@@ -1,7 +1,6 @@
 @import './variables';
 
 .performance-container {
-    // background-color: #fff;
     height: 100%;
     width: 100%;
     display: grid;
@@ -13,8 +12,7 @@
         grid-column: 1/2;
         grid-row: 1/2;
         padding: 60px 36px 26px;
-        // border: 1px solid $table-border-primary;
-
+        
         display: grid;
         grid-template-rows: 10% 90%;
 
@@ -73,13 +71,11 @@
         grid-column: 1/2;
         grid-row: 2/3;
         padding: 25px 35px 0;
-        // border: 1px solid $table-border-primary;
 
         display: grid;
         grid-template-rows: 17% auto;
 
         &-row {
-            // background-color: cadetblue;
             @extend %head-row;
 
             &-title {
@@ -97,7 +93,6 @@
         }
 
         &-table {
-            // background-color: bisque;
             width: 100%;
             height: 100%;
             position: relative;
@@ -106,19 +101,19 @@
                 background-color: rgba(70, 113, 255, 0.1);
     
                 width: 100%;
-                height: 60px;
+                height: 64px;
                 border-radius: 10px;
                 
                 position: absolute;
-                top: 8px;
+                top: 0px;
     
-                z-index: 1;
+                z-index: 0;
             }
 
             &-component {
                 height: 100%;
                 width: 100%;
-                z-index: 0;
+                z-index: 1;
             }
         }
     }
@@ -167,7 +162,6 @@
         }
 
         &-consumed {
-            // background-color: bisque;
             padding: 20px 35px 5px 20px;
             box-shadow: 1px 1px 3px 1px #6c6c6c4d;
             margin-bottom: 18px;
@@ -231,7 +225,6 @@
 
         &-payroll {
             width: 100%;
-            // height: 100%;
             margin-top: 45px;
             
             &-row {
@@ -270,7 +263,6 @@
                         position: absolute;
                         width: calc(100% - 20px);
                         min-width: 500px;
-                        // overflow-x: auto;
     
                         .head {
                             @extend %text-quaternary;
