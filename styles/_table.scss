@@ -32,5 +32,26 @@
     }
 }
 
+@media screen and (max-width: 450px) {
+    .table {
+        &-container {
+            &-components {
+                min-width: 530px;
+                
+                thead {
+                    height: 50px;
+                }
+                
+                tbody {
+                    height: 36px;
+                }
+            
+                th, td {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+}
 
 

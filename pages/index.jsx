@@ -92,7 +92,7 @@ export default function Performance () {
                         > 70% </progress>
                     </div>
                     <div className="performance-container__payments-consumed-row donw">
-                        <p className="performance-container__payments-consumed-row-terciary">Proxima deuda a pagar</p>
+                        <p className="performance-container__payments-consumed-row-terciary">Proxima deuda a pagar:</p>
                         <p className="performance-container__payments-consumed-row-terciary">07 de octubre de 2021</p>
                     </div>
                 </div>
