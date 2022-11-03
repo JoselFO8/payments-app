@@ -27,22 +27,20 @@ export default function Navbar () {
                 </div>
 
                 <div className="navbar-container__icons">
-                    <a href='#!'>
+                    <a href='#!' className="navbar-container__icons-bell">
                         <Image 
                             src="/icons/bell.png"
                             alt="Notifications"
                             width={27}
                             height={33}
-                            className="navbar-container__icons-icon"
                         />
                     </a>
-                    <a href='#!'>
+                    <a href='#!' className="navbar-container__icons-menu">
                         <Image 
                             src="/icons/menu.png"
                             alt="Menu"
                             width={27}
                             height={33}
-                            className="navbar-container__icons-icon"
                         />
                     </a>
                 </div>
