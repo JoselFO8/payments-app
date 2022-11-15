@@ -46,7 +46,7 @@ export default function Table({tableData}) {
                 return (
                         <tbody key={r.folio} >
                             <tr>
-                                <th><input type="radio" /></th>
+                                <th><input className="radio" type="radio" /></th>
                                 <td className='num'>${formatNumber(r.folio)}</td>
                                 <td>{r.proveedor}</td>
                                 <td>{r.tipo}</td>

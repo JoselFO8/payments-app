@@ -29,6 +29,15 @@
                 border-bottom: 4px solid rgb(75, 100, 245, 0.5);
                 cursor: pointer;
             }
+
+            td, th {
+                padding-left: 8px;
+                border-right: 1px solid $table-border-primary;
+            }
+
+            th:first-child, td:last-child, th:last-child {
+                border: none;
+            }
         
             .num {
                 font-family: $font-terciary;
@@ -36,17 +45,17 @@
         }
     }
 
-    &-loader {
-        height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 10px;
+    // &-loader {
+    //     height: 60px;
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+    //     margin-top: 10px;
 
-        p {
-            margin: 0;
-        }
-    }
+    //     p {
+    //         margin: 0;
+    //     }
+    // }
 }
 
 @media screen and (max-width: 450px) {
