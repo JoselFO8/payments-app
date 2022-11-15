@@ -6,8 +6,7 @@ import Navbar from "./navBar/index.jsx"
 import LeftNav from "./left-nav/index.jsx"
 
 export default function Layout (props) {
-    // Estado + bolean + activar o desactivar left-nav mediante dos clases en el cual intervenga un grid ancho-leftnav + auto
-
+    
     return (
         <div className="layout">
             <Head>

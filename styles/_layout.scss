@@ -53,7 +53,7 @@
 
                     &-panel {
                         position: absolute;
-                        width: 100%;
+                        width: calc(100% - 6px);
                         height: auto;
                     }
                 }
@@ -65,12 +65,19 @@
 
 @media screen and (max-width: 700px) {
     .layout {
+        height: calc(100vh - 18px * 2);
+        width: calc(100vw - 18px * 2);
         padding: 18px 18px;
 
         &-container {
     
             &__full {
                 grid-column: 1/3;
+            
+                &-base {
+                    width: 100%;
+                    min-width: 273px;
+                }
             }
 
             &__left-nav {

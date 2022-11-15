@@ -1,4 +1,3 @@
-// import Graphyc from '../components/graphyc/index'
 import Graphyc from '../components/graphyc/index'
 import Table from '../components/table/index'
 import formatNumber from '../services/formatNumber'

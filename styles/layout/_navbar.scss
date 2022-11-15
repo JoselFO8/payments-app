@@ -85,7 +85,16 @@
 
 @media screen and (max-width: 700px) {
     .navbar-container {
-    
+        &__acount {
+            
+            &-greeting {
+                h3 {
+                    font-size: 1.6rem;
+                    text-align: center;
+                }
+            }
+        }
+
         &__slogan {
             display: block;
             margin-left: 26px;
@@ -95,13 +104,13 @@
 
 @media screen and (max-width: 450px) {
     .navbar-container {
-        
         &__acount {
             
             &-greeting {
                 margin: 0;
                 h3 {
-                    font-size: 1.2rem;
+                    font-size: 1.1rem;
+                    text-align: center;
                 }
             }
         }
