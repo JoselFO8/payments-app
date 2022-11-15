@@ -1,4 +1,5 @@
-import Graphyc from '../components/graphyc/index'
+// import Graphyc from '../components/graphyc/index'
+import Graphyc from './graphyc/index'
 import Table from '../components/table/index'
 import formatNumber from '../services/formatNumber'
 
@@ -38,7 +39,7 @@ export default function Performance () {
                 <div className="performance-container__graphic-row">
                     <h4 className="performance-container__graphic-row-title">Performance</h4>
                     <div className="performance-container__graphic-row-labels">
-                        {/* Line colors */}
+                        
                         {renderLines}
                     </div>
                     <select className="performance-container__graphic-row-order">
@@ -46,7 +47,11 @@ export default function Performance () {
                     </select>
                 </div>
                 <div className="performance-container__graphic-statistics">
-                    <Graphyc chartData={data.chartData} />
+                    {
+                        data && data.chartData 
+                        ?   <Graphyc chartData={data.chartData} />
+                        :   <div></div>
+                    }
                 </div>
             </div>
 
@@ -59,7 +64,11 @@ export default function Performance () {
                 <div className="performance-container__pending-payments-table">
                     <div className="performance-container__pending-payments-table-on"/>
                     <div className='performance-container__pending-payments-table-component'>
-                        <Table tableData={data.tableData}/>
+                    {
+                        data && data.chartData 
+                        ?   <Table tableData={data.tableData}/>
+                        : <div></div>
+                    }
                     </div>
                 </div>
 

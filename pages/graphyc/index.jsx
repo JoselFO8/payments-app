@@ -45,11 +45,10 @@ const options = {
 }
 
 export default function Graphyc({chartData}) {
-    
+    if(!chartData) return <div></div>
+
     const data = useMemo(function() {
         // chart pide que le enviemos un objeto con propiedades para pintar el grafico
-        if(!chartData ) return
-
         return {
             // Set de datos que se pinten en nuestro grafico
             datasets: [
@@ -88,7 +87,7 @@ export default function Graphyc({chartData}) {
                 data={data}
                 options={options}
             ></Line>
-             
+            
         </div>
     )
 }
