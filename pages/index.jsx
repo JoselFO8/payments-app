@@ -1,5 +1,5 @@
-import Graphyc from './graphyc/index'
-import Table from './table/index'
+import Graphyc from '../components/graphyc/index'
+import Table from '../components/table/index'
 import formatNumber from '../services/formatNumber'
 
 export default function Performance () {
