@@ -80,10 +80,15 @@ export default function Graphyc({chartData}) {
 
     return (
         <div className="graphyc-container">
-            <Line 
-                data={data}
-                options={options}
-            ></Line>
+            {
+                chartData 
+                ?
+                    <Line 
+                        data={data}
+                        options={options}
+                    ></Line>
+                : <div></div>
+            }
         </div>
     )
 }

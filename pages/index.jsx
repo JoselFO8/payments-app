@@ -173,6 +173,3 @@ export default function Performance () {
         </div>
     )
 }
-
-// Corregir como se presentan los numeros en la tabla, separar por puntos
-// Hacer filtros en la tabla segun columna
