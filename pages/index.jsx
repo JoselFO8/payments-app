@@ -41,7 +41,7 @@ export default function Performance () {
                         {/* Line colors */}
                         {renderLines}
                     </div>
-                    <select name="" id="" className="performance-container__graphic-row-order">
+                    <select className="performance-container__graphic-row-order">
                         <option value="" disabled selected>Filtrar por</option>
                     </select>
                 </div>
@@ -104,7 +104,7 @@ export default function Performance () {
                 <div className="performance-container__payments-payroll">
                     <div className="performance-container__payments-payroll-row">
                         <p className="performance-container__payments-payroll-row-secondary">Mis nóminas</p>
-                        <select name="" id="" className='performance-container__payments-payroll-row-select'>
+                        <select className='performance-container__payments-payroll-row-select'>
                             <option value="" disabled selected>En proceso de revisión</option>
                         </select>
                     </div>
